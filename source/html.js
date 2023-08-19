@@ -1,4 +1,8 @@
 import './styling/style.css';
+import noodlesImg from './img/noodles.png'
+import fishImg from './img/fish.png'
+import pizzaImg from './img/pizza.png'
+import hamburguerImg from './img/hamburguer.png'
 
 
 function mkEl(el){
@@ -14,6 +18,36 @@ function append(el,el2){
 el.appendChild(el2)
 }
 
+
+function createFood(foodname,image, info){
+const li = mkEl('li');
+
+
+
+
+const figure = mkEl('figure')
+
+let img = mkEl('img');
+img.src = image;
+
+let foodName = mkEl('figCaption');
+foodName.innerText = foodname;
+
+
+let foodInformation = mkEl('p');
+foodInformation.innerText = info;
+
+append(foodList, li);
+append(figure, img);
+append(li, figure);
+append(figure, foodName);
+append(li, foodInformation);
+}
+
+
+
+
+
 const header = mkEl('header');
 const tittle = mkEl('h1');
 tittle.innerHTML = `Walfa Restaurant by <a href='https://gabbeeto.github.io/' target='_blank'>gabbeto</a>`;
@@ -28,27 +62,36 @@ const main = mkEl('main');
 
 appendInDocument(main);
 
-const sectionForButtons = mkEl('Section');
+export const sectionForButtons = mkEl('Section');
 sectionForButtons.id = 'buttonSection';
 
-const homeButton = mkEl('button');
+export const homeButton = mkEl('button');
 homeButton.innerText = 'home';
 
-const aboutButton = mkEl('button');
-aboutButton.innerText = 'about us';
 
-const menuButton = mkEl('button');
+export const menuButton = mkEl('button');
 menuButton.innerText = 'menu';
+
+
+export const aboutButton = mkEl('button');
+aboutButton.innerText = 'about me';
 
 
 
 append(main, sectionForButtons);
 append(sectionForButtons, homeButton);
-append(sectionForButtons, aboutButton);
 append(sectionForButtons, menuButton);
+append(sectionForButtons, aboutButton);
 
 
-const sectionForHome = mkEl('section')
+
+
+
+
+
+//home section
+export const sectionForHome = mkEl('section')
+sectionForHome.id = 'home';
 
 
 const homeTittle = mkEl('h2')
@@ -64,3 +107,57 @@ append(sectionForHome, homeTittle);
 append(sectionForHome, homeDescription);
 
 
+
+
+
+
+
+
+
+
+
+//menu section
+export const sectionForMenu = mkEl('section');
+sectionForMenu.id = 'menu';
+
+const foodList  = mkEl('ul');
+
+
+
+
+
+
+append(main, sectionForMenu);
+append(sectionForMenu, foodList);
+createFood('noodles', noodlesImg, 'my favorite food')
+createFood('pizza', pizzaImg,'I like this one' )
+createFood('hamburguer', hamburguerImg, 'I desire this one sometimes')
+createFood('fish', fishImg, `this is the one I hate, but it's loved by the walfa community`)
+
+
+
+
+
+
+
+
+
+
+
+
+//'about us' section
+export const sectionForAbout = mkEl('section');
+sectionForAbout.id = 'about';
+
+
+
+const aboutMeTittle = mkEl('h2')
+aboutMeTittle.innerText = 'I am Gabbeeto'
+
+
+const aboutMeDescription = mkEl('p')
+aboutMeDescription.innerText = `I usually code for fun, I hope you like this fake restaurant, I've been learning how to code for few months`;
+
+append(main, sectionForAbout);
+append(sectionForAbout, aboutMeTittle);
+append(sectionForAbout, aboutMeDescription);
