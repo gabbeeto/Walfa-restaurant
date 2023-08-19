@@ -1,0 +1,72 @@
+
+@font-face{
+font-family: 'default';
+src: url('./fonts/Darling.ttf');
+}
+
+
+@font-face{
+font-family: 'button';
+src: url('./fonts/Butter.otf');
+}
+
+:root{
+--yellow: #f3b87b;
+--brown: #352921;
+--pink: #FF74C4;
+--white: white;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+background-color: var(--yellow);
+color: var(--pink);
+font-family: 'default';
+}
+
+header{
+border-bottom: 2px solid white;
+background-color: var(--brown);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+a:link{
+color: #DC8389;
+}
+a:visited{
+color: #CB88EF;
+}
+
+main, section{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+section:first-of-type{
+gap: 5px;
+}
+
+button{
+background-color: var(--brown);
+border: 2px solid var(--white);
+color: var(--white);
+padding: 15px;
+border-radius: 30px;
+font-family: 'button';
+font-size: calc(1rem + 5px);
+}
+
+main, section:nth-of-type(2){
+flex-direction: column;
+gap: 10px;
+}
+
+
