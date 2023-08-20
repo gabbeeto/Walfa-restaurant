@@ -1,4 +1,5 @@
 import './styling/style.css';
+import mainImg from './img/restaurantPicture.png'
 import noodlesImg from './img/noodles.png'
 import fishImg from './img/fish.png'
 import pizzaImg from './img/pizza.png'
@@ -105,9 +106,14 @@ append(sectionForButtons, aboutButton);
 export const sectionForHome = mkEl('section')
 sectionForHome.id = 'home';
 
+const mainFigure = mkEl('figure');
 
-const homeTittle = mkEl('h2')
-homeTittle.innerText = 'Welcome to Restaurant'
+
+const mainPicture = mkEl('img');
+mainPicture.src = mainImg;
+
+const homeTittle = mkEl('figcaption')
+homeTittle.innerText = 'Welcome to the Restaurant!'
 
 
 const homeDescription = mkEl('p')
@@ -115,7 +121,10 @@ homeDescription.innerText = `This Restaurant is made for the walfa community so 
 
 
 append(main, sectionForHome);
-append(sectionForHome, homeTittle);
+
+append(sectionForHome, mainFigure);
+append(mainFigure, mainPicture);
+append(mainFigure, homeTittle);
 append(sectionForHome, homeDescription);
 
 
@@ -144,7 +153,7 @@ append(sectionForMenu, foodList);
 createFood('noodles','3$', noodlesImg, 'my favorite food')
 createFood('pizza', '5$' ,pizzaImg,'I like this one' )
 createFood('hamburguer', '4$', hamburguerImg, 'I desire this one sometimes')
-createFood('fish', '2$', fishImg, `this is the one I hate, but it's loved by the walfa community`)
+createFood('fish', '2$', fishImg, `loved by walfas but not by me`)
 
 
 
