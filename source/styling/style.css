@@ -170,6 +170,13 @@ background-color: #FFC85C;
 }
 
 
+section:last-of-type img{
+width: 20vw;
+height: 20vw;
+
+}
+
+
 button{
 background-color: var(--brown);
 border: 2px solid var(--white);

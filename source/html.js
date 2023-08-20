@@ -11,7 +11,7 @@ import frenchFriesImg from './img/frenchFries.png'
 import saladImg from './img/salad.png' 
 import porkImg from './img/pork.png' 
 
-
+import facePictureImg from './img/gabbetoFace.png'
 
 //simplify code section
 
@@ -177,7 +177,7 @@ createFood('french fries', '3$', frenchFriesImg, `if you want the mcdunals feeli
 
 
 
-//'about us' section
+//'about me' section
 export const sectionForAbout = mkEl('section');
 sectionForAbout.id = 'about';
 
@@ -188,11 +188,16 @@ aboutMeTittle.innerText = 'I am Gabbeeto'
 
 
 const aboutMeDescription = mkEl('p')
-aboutMeDescription.innerText = `I usually code for fun, I hope you like this fake restaurant, I've been learning how to code for few months`;
+aboutMeDescription.innerHTML = `I usually code for fun, I hope you like this fake restaurant, I've been learning how to code for few months. you can visit my own <a  href='https://gabbeeto.github.io/' target='_blank'>page<a> and my own <a target='_blank' href='https://github.com/gabbeeto/'>github account</a> if you want to`;
+
+const facePicture = mkEl('img');
+facePicture.src = facePictureImg;
+
 
 append(main, sectionForAbout);
 append(sectionForAbout, aboutMeTittle);
 append(sectionForAbout, aboutMeDescription);
+append(sectionForAbout, facePicture);
 
 
 
