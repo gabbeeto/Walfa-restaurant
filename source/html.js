@@ -5,6 +5,9 @@ import pizzaImg from './img/pizza.png'
 import hamburguerImg from './img/hamburguer.png'
 
 
+//simplify code section
+
+
 function mkEl(el){
 return document.createElement(el);
 }
@@ -48,9 +51,12 @@ append(li, foodInformation);
 
 
 
+
+//header section 
+
 const header = mkEl('header');
 const tittle = mkEl('h1');
-tittle.innerHTML = `Walfa Restaurant by <a href='https://gabbeeto.github.io/' target='_blank'>gabbeto</a>`;
+tittle.innerHTML = `Walfa Restaurant <span> by <a href='https://gabbeeto.github.io/' target='_blank'>gabbeto</a> </span>`;
 
 
 appendInDocument(header);
@@ -59,7 +65,6 @@ append(header, tittle);
 
 
 const main = mkEl('main');
-
 appendInDocument(main);
 
 export const sectionForButtons = mkEl('Section');
@@ -161,3 +166,6 @@ aboutMeDescription.innerText = `I usually code for fun, I hope you like this fak
 append(main, sectionForAbout);
 append(sectionForAbout, aboutMeTittle);
 append(sectionForAbout, aboutMeDescription);
+
+
+
