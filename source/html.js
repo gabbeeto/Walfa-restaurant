@@ -22,7 +22,7 @@ el.appendChild(el2)
 }
 
 
-function createFood(foodname,image, info){
+function createFood(foodname, price, image, foodInfo){
 const li = mkEl('li');
 
 
@@ -36,15 +36,22 @@ img.src = image;
 let foodName = mkEl('figCaption');
 foodName.innerText = foodname;
 
+const foodAndPriceInfoContainer = mkEl('div');
 
 let foodInformation = mkEl('p');
-foodInformation.innerText = info;
+foodInformation.innerText = foodInfo;
+
+let priceInformation = mkEl('h3');
+priceInformation.innerText = price;
 
 append(foodList, li);
-append(figure, img);
 append(li, figure);
-append(figure, foodName);
+append(figure, img);
+append(figure, foodAndPriceInfoContainer);
+append(foodAndPriceInfoContainer, foodName);
+append(foodAndPriceInfoContainer, priceInformation);
 append(li, foodInformation);
+
 }
 
 
@@ -134,10 +141,10 @@ const foodList  = mkEl('ul');
 
 append(main, sectionForMenu);
 append(sectionForMenu, foodList);
-createFood('noodles', noodlesImg, 'my favorite food')
-createFood('pizza', pizzaImg,'I like this one' )
-createFood('hamburguer', hamburguerImg, 'I desire this one sometimes')
-createFood('fish', fishImg, `this is the one I hate, but it's loved by the walfa community`)
+createFood('noodles','3$', noodlesImg, 'my favorite food')
+createFood('pizza', '5$' ,pizzaImg,'I like this one' )
+createFood('hamburguer', '4$', hamburguerImg, 'I desire this one sometimes')
+createFood('fish', '2$', fishImg, `this is the one I hate, but it's loved by the walfa community`)
 
 
 
