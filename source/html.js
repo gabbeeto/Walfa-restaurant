@@ -1,9 +1,16 @@
 import './styling/style.css';
 import mainImg from './img/restaurantPicture.png'
+
 import noodlesImg from './img/noodles.png'
 import fishImg from './img/fish.png'
 import pizzaImg from './img/pizza.png'
 import hamburguerImg from './img/hamburguer.png'
+
+import croissantImg from './img/croissant.png' 
+import frenchFriesImg from './img/frenchFries.png' 
+import saladImg from './img/salad.png' 
+import porkImg from './img/pork.png' 
+
 
 
 //simplify code section
@@ -150,10 +157,14 @@ const foodList  = mkEl('ul');
 
 append(main, sectionForMenu);
 append(sectionForMenu, foodList);
-createFood('noodles','3$', noodlesImg, 'my favorite food')
-createFood('pizza', '5$' ,pizzaImg,'I like this one' )
-createFood('hamburguer', '4$', hamburguerImg, 'I desire this one sometimes')
-createFood('fish', '2$', fishImg, `loved by walfas but not by me`)
+createFood('noodles','3$', noodlesImg, 'my favorite food');
+createFood('pizza', '5$' ,pizzaImg,'I like this one' );
+createFood('hamburguer', '4$', hamburguerImg, 'I desire this one sometimes');
+createFood('fish', '2$', fishImg, `loved by walfas but not by me`);
+createFood('pork', '5$', porkImg, `over-rated`);
+createFood('salad', '3$', saladImg, `for those of you who are vegan`);
+createFood('croissant', '2$', croissantImg, `je ne peux pas parle le francai`);
+createFood('french fries', '3$', frenchFriesImg, `if you want the mcdunals feeling`);
 
 
 
