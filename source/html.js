@@ -71,7 +71,7 @@ append(li, foodInformation);
 
 const header = mkEl('header');
 const tittle = mkEl('h1');
-tittle.innerHTML = `Walfa Restaurant <span> by <a href='https://gabbeeto.github.io/' target='_blank'>gabbeto</a> </span>`;
+tittle.innerHTML = `Walfa Restaurant <span> by <a href='https://gabbeeto.github.io/' target='_blank'>Gabbeto</a> </span>`;
 
 
 appendInDocument(header);
